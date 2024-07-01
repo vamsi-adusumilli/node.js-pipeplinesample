@@ -5,21 +5,24 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building your project...'
-                sh 'mvn clean install'  // Example: Maven build
+                // Add your build commands here
+                sh 'echo "Build stage"'
             }
         }
-        
+
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'mvn test'  // Example: Run tests
+                // Add your test commands here
+                sh 'echo "Test stage"'
             }
         }
-        
+
         stage('Deploy') {
             steps {
                 echo 'Deploying your application...'
-                sh 'ssh user@server "deploy_script.sh"'  // Example: Deploy script
+                // Add your deployment commands here
+                sh 'echo "Deploy stage"'
             }
         }
     }
@@ -33,4 +36,5 @@ pipeline {
         }
     }
 }
+
 
